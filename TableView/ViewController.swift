@@ -19,3 +19,29 @@ class ViewController: UIViewController {
 
 }
 
+
+extension ViewController : UITableViewDelegate {
+    
+    
+    
+    
+}
+
+extension ViewController : UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SampleCell") as! SampleCell
+        cell.sampleLabel.text = "Sample"
+        cell.sampleImageView.image = UIImage(named: "rose.png")
+        
+        return cell
+
+    }
+    
+}
