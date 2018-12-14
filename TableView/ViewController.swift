@@ -22,7 +22,11 @@ class ViewController: UIViewController {
 
 extension ViewController : UITableViewDelegate {
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        print("Selected Row = \(indexPath.row + 1)")
+        
+    }
     
     
 }
